@@ -676,7 +676,11 @@
 
             xhr.send();
             alert("Form Submitted Successfully")
-            window.location.reload()
+            // window.location.reload()
+            document.getElementById("name").value=""
+            document.getElementById("address").value=""
+            document.getElementById("number").value=""
+            document.getElementById("event_type").value=""
          
         }
                     </script>
