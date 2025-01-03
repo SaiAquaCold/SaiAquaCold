@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Aqua Cold - Water Supply Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header and Navigation */
+        .top-bar {
+            background: #1ca3ec;
+            color: white;
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-strip {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container-fluid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1ca3ec;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1ca3ec;
+        }
+
+        .navbar {
+            --bs-navbar-brand-margin-end: 2.5rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1ca3ec;
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1920/800');
+            background-image: url('/baptiste-buisson-h6vn81P6C7k-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #1ca3ec;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Services Section */
+        .services-container {
+            background: #f8f9fa;
+            padding: 6rem 2rem;
+        }
+
+        .services {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-imagews {
+            height: 200px;
+            background-image: url(/daiy2.jpg);
+            width: 100%; /* Adjust the width as needed */
+            /* height: 100%; Adjust the height as needed */
+            background-size: cover; /* Ensures the image covers the entire div */
+            background-position: top; /* Centers the image within the div */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+        }
+        .service-imagewd {
+            height: 200px;
+            background-image: url(/istockphoto-1272800955-2048x2048.jpg);
+            width: 100%; /* Adjust the width as needed */
+            /* height: 100%; Adjust the height as needed */
+            background-size: cover; /* Ensures the image covers the entire div */
+            background-position: top; /* Centers the image within the div */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+        }
+        .service-imagewa {
+            height: 200px;
+            background-image: url(/forever-r-o-water-services-sitapur-rd-lucknow-lucknow-drinking-water-suppliers-clxp0uyolr.jpg);
+            width: 100%; /* Adjust the width as needed */
+            /* height: 100%; Adjust the height as needed */
+            background-size: cover; /* Ensures the image covers the entire div */
+            background-position: top; /* Centers the image within the div */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+        }
+
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content i {
+            font-size: 2.5rem;
+            color: #1ca3ec;
+            margin-bottom: 1rem;
+        }
+
+        /* Booking Section */
+        .booking-section {
+            background: white;
+            background-image: url(/alex-perez-wEgR12N01Tk-unsplash.jpg);
+            /* width: 100%; Adjust the width as needed */
+            /* height: 100%; Adjust the height as needed */
+            /* background-size: cover; Ensures the image covers the entire div */
+            /* background-position: center; Centers the image within the div */
+            /* background-repeat: no-repeat; Prevents the image from repeating */
+            padding: 6rem 2rem;
+    
+        }
+
+        .booking-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .booking-info {
+            padding-right: 2rem;
+        }
+
+        .booking-form {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Products Section */
+        .products-section {
+            background: #f8f9fa;
+            padding: 6rem 2rem;
+        }
+
+        .products-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            /* background-image: url(/First.png); */
+            height: 200px;
+            width: 100%; /* Adjust the width as needed */ 
+            overflow: hidden; /* Ensures the image doesn't overflow the div */
+            background-repeat: repeat-x;
+            /* height: 250px;
+            overflow: hidden; */
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-repeat: repeat-x;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+        }
+
+        .footer-section h3 {
+            /* margin-left: 5rem; */
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-sectionq h3 {
+            margin-left: 7rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            /* align-items: center; */
+        }
+
+        .footer-links {
+            margin-left: 5rem;
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-outline-success {
+            --bs-btn-color: #1ca3ec;
+            --bs-btn-border-color: #1ca3ec;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #1ca3ec;
+            --bs-btn-hover-border-color: #1ca3ec;
+            --bs-btn-focus-shadow-rgb: 25, 135, 84;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #1ca3ec;
+            --bs-btn-active-border-color: #1ca3ec;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #1ca3ec;
+            --bs-btn-disabled-bg: transparent;
+            --bs-btn-disabled-border-color: #1ca3ec;
+            --bs-gradient: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-strip {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="top-bar">
+        <div class="contact-strip">
+            <!-- <span>+1 234 567 890</span> -->
+            <!-- <span> info@saiaquacold.com</span> -->
+        </div>
+        <div class="social-links">
+            <!-- <i class="fab fa-facebook">+1 234 567 890</i> -->
+            <i class="fas fa-phone">+1 234 567 890</i>
+            <i class="fas fa-envelope">info@saiaquacold.com</i>
+            <!-- <i class="fab fa-instagram"></i> -->
+            <!-- <i class="fab fa-twitter"></i> -->
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-dar fixed-top bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sai Aqua Cold</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#booking">Booking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <!-- <nav>
+        <div class="nav-container">
+            <div class="logo">Sai Aqua Cold</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Pure Drinking Water <br>for Every Occasion</h1>
+            <p>Premium water supply services for weddings ,mundan ,valima and all special occasions. Quality assured. शादियों, मुंडन, वलीमा और सभी विशेष अवसरों के लिए प्रीमियम पानी आपूर्ति सेवाएं। गुणवत्ता की गारंटी।</p>
+            <a href="#booking" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <section class="services-container" id="services">
+        <div class="services">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive water solutions for all your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-imagews"></div>
+                    <div class="service-content">
+                        <i class="fas"></i>
+                        <h3>Water Supply</h3>
+                        <p>Daily supply of high-quality water for all events, with guaranteed purity and on-time delivery.</p>
+                        <p>सभी कार्यक्रमों के लिए उच्च गुणवत्ता वाला पानी रोजाना, शुद्धता की गारंटी और समय पर डिलीवरी के साथ।</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-imagewd"></div>
+                    <div class="service-content">
+                        <i class="fas"></i>
+                        <h3>Wedding Services</h3>
+                        <p>Specialized water arrangements for weddings with dedicated 20L water bottles and packaged bottles.</p>
+                        <p>शादी विवाह के शुभ अवसर पर 20 लीटर जार एवं 250 ml पानी बोतल की व्यवस्था!</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-imagewa"></div>
+                    <div class="service-content">
+                        <i class="fas"></i>
+                        <h3>Water Accessories</h3>
+                        <p>We offer a full range of water plant accessories and products like 20L plastic jars, water filters, 15L chilled jars, handles, taps, dispensers, and other related items.</p>
+                        <p>हम 20L प्लास्टिक जार, वाटर फिल्टर, 15L चिल्ड जार, हैंडल, नल, डिस्पेंसर और अन्य संबंधित वस्तुओं जैसे पानी संयंत्र के सामान और उत्पादों की पूरी श्रृंखला प्रदान करते हैं।</p>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+        <div class="booking-container">
+            <div class="booking-info">
+                <h2>Book Our Services</h2>
+                <h5>Call @9936605094 or @9935847227</h5>
+                <p>Let us handle your water supply needs for any occasion such as Wedding, Mundan, Valima etc. Fill out the form and we'll get back to you within 24 hours.</p>+
+                <p>शादी, मुंडन, वलीमा आदि जैसे किसी भी अवसर के लिए अपने पानी की आपूर्ति की ज़रूरतों को हमें सौंपें। फॉर्म भरें और हम 24 घंटे के भीतर आपसे संपर्क करेंगे।</p>
+            </div>
+
+      
+            <div class="booking-form">
+                <form  id="dataForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" name="Name" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Address" name="Address" id="address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" name="Phone Number" id="number" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="Event Type" id="event_type" required>
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Mundan</option>
+                                <option value="party">Party</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea rows="4" placeholder="Additional Requirements"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="cta-button">Submit Booking</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2>Our Products</h2>
+            <p>Quality water and water accessories for every need</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/First.png" alt="Water Storage Tank">
+                </div>
+                <div class="product-info">
+                    <h3>Daily Supply Water Jars</h3>
+                    <p> We offer high-quality storage solutions in different sizes like 15L CoolJar, 20L Jar, Dispenser, and Combo</p>
+                    <p> हम विभिन्न आकारों में उच्च गुणवत्ता वाले भंडारण समाधान प्रदान करते हैं जैसे 15L कूलजार, 20L जार, डिस्पेंसर और कॉम्बो।</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/Second.png" alt="Water Pipes">
+                </div>
+                <div class="product-info">
+                    <h3>Jar Handles, Taps & Filters</h3>
+                    <p>We provide high-quality jar handles, jar taps, and RO plant filters</p>
+                    <p>हम उच्च गुणवत्ता वाले जार हैंडल, जार नल, और आरओ प्लांट फिल्टर प्रदान करते हैं।</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/waterroll.jpg" alt="Filtration Systems">
+                </div>
+                <div class="product-info">
+                    <h3>Pouch Water Roll and Plastic Scak</h3>
+                    <p>We provide high-quality pouch water rolls, plastic bags, and thread.</p>
+                    <p>हम उच्च गुणवत्ता वाले पाउच पानी रोल, प्लास्टिक बैग(बोरा) और धागा प्रदान करते हैं।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Sai Aqua Cold is your trusted partner for water supply solutions, serving events and occasions with quality and reliability</p>
+                <p>साई एक्वा कोल्ड आपके जल आपूर्ति समाधान के लिए भरोसेमंद साथी है, जो कार्यक्रमों और अवसरों के लिए गुणवत्ता और विश्वसनीयता के साथ सेवा करता है।</p>
+            </div>
+            <div class="footer-sectionq">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#booking">Book Now</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+
+                <p>Phone: +91 9936605094, +91 9935847227</p>
+                <p>Address 1: Near HomeGaurd Office, Chiuraha Rd, Bismil Nagar, Maharajganj 273303 </p>
+                <p>Address 2: Near EveryDay Super Mart, Bismil Nagar, Maharajganj, Uttar Pradesh 273303 </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sai Aqua Cold. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(e){
+            e.preventDefault()
+            fetchData()
+        })
+        function fetchData() {
+            url="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTZmMDYzMTA0MzQ1MjY4NTUzNzUxM2Ei_pc"
+            param1 = "Name"
+            param2 = "Address"
+            param3 = "Phone Number"
+            param4 = "Event Type"
+            value1 = document.getElementById("name").value
+            value2 = document.getElementById("address").value
+            value3 = document.getElementById("number").value
+            value4 = document.getElementById("event_type").value
+            const xhr = new XMLHttpRequest();
+            const fullUrl = `${url}?${param1}=${value1}&${param2}=${value2}&${param3}=${value3}&${param4}=${value4}`;
+
+            xhr.open('GET', fullUrl, true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        const data = JSON.parse(xhr.responseText);
+                        console.log(data);
+                    } else {
+                        console.error('There has been a problem with your request:', xhr.statusText);
+                    }
+                }
+            };
+
+            xhr.send();
+            alert("Form Submitted Successfully")
+            window.location.reload()
+         
+        }
+                    </script>
+
+
+</body>
+</html>
