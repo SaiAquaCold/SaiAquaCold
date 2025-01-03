@@ -168,7 +168,15 @@
         .service-card {
             background: white;
             border-radius: 15px;
-            width: 95%;
+
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
             overflow: hidden;
             transition: transform 0.3s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -182,28 +190,31 @@
             height: 200px;
             background-image: url('./daiy2.jpg');
             width: 100%; /* Adjust the width as needed */
+            overflow: hidden;
             /* height: 100%; Adjust the height as needed */
-            background-size: cover; /* Ensures the image covers the entire div */
-            background-position: top; /* Centers the image within the div */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
+            /* background-size: cover; Ensures the image covers the entire div */
+            /* background-position: top; Centers the image within the div */
+            /* background-repeat: no-repeat; Prevents the image from repeating */
         }
         .service-imagewd {
             height: 200px;
             background-image: url('./istockphoto-1272800955-2048x2048.jpg');
             width: 100%; /* Adjust the width as needed */
+            overflow: hidden;
             /* height: 100%; Adjust the height as needed */
-            background-size: cover; /* Ensures the image covers the entire div */
-            background-position: top; /* Centers the image within the div */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
+            /* background-size: cover; /* Ensures the image covers the entire div */
+            /* background-position: top; Centers the image within the div */
+            /* background-repeat: no-repeat; Prevents the image from repeating */ */
         }
         .service-imagewa {
             height: 200px;
             background-image: url('./forever-r-o-water-services-sitapur-rd-lucknow-lucknow-drinking-water-suppliers-clxp0uyolr.jpg');
             width: 100%; /* Adjust the width as needed */
+            overflow: hidden;
             /* height: 100%; Adjust the height as needed */
-            background-size: cover; /* Ensures the image covers the entire div */
-            background-position: top; /* Centers the image within the div */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
+            /* background-size: cover; Ensures the image covers the entire div */
+            /* background-position: top; Centers the image within the div */
+            /* background-repeat: no-repeat; Prevents the image from repeating */
         }
 
 
@@ -493,12 +504,51 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Pure Drinking Water <br>for Every Occasion</h1>
-            <p>Premium water supply services for weddings ,mundan ,valima and all special occasions. Quality assured. शादियों, मुंडन, वलीमा और सभी विशेष अवसरों के लिए प्रीमियम पानी आपूर्ति सेवाएं। गुणवत्ता की गारंटी।</p>
+            <p>Premium water supply services for weddings ,mundan ,valima and all special occasions. Quality assured. शादी, मुंडन, वलीमा और सभी विशेष अवसरों के लिए प्रीमियम पानी आपूर्ति सेवाएं। गुणवत्ता की गारंटी।</p>
             <a href="#booking" class="cta-button">Book Now</a>
         </div>
     </section>
 
-    <section class="services-container" id="services">
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive water solutions for all your needs</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./bottle.jpg" alt="Water Storage Tank">
+                </div>
+                <div class="product-info">
+                    <h3>Water Supply</h3>
+                    <p>Daily supply of high-quality water for all events, with guaranteed purity and on-time delivery</p>
+                    <p>सभी कार्यक्रमों के लिए उच्च गुणवत्ता वाला पानी रोजाना, शुद्धता की गारंटी और समय पर डिलीवरी के साथ।</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./istockphoto-1272800955-2048x2048.jpg" alt="Water Pipes">
+                </div>
+                <div class="product-info">
+                    <h3>Wedding Services</h3>
+                    <p>Specialized water arrangements for weddings with dedicated 20L water bottles and packaged bottles.</p>
+                    <p>शादी विवाह के शुभ अवसर पर 20 लीटर जार एवं 250 ml पानी बोतल की व्यवस्था!</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./forever-r-o-water-services-sitapur-rd-lucknow-lucknow-drinking-water-suppliers-clxp0uyolr.jpg" alt="Filtration Systems">
+                </div>
+                <div class="product-info">
+                    <h3>Water Accessories</h3>
+                    <p>We offer a full range of water plant accessories and products like 20L plastic jars, water filters, 15L chilled jars, handles, taps, dispensers, and other related items.</p>
+                    <p>हम 20L प्लास्टिक जार, वाटर फिल्टर, 15L चिल्ड जार, हैंडल, नल, डिस्पेंसर और अन्य संबंधित वस्तुओं जैसे पानी संयंत्र के सामान और उत्पादों की पूरी श्रृंखला प्रदान करते हैं।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="services-container" id="services">
         <div class="services">
             <div class="section-header">
                 <h2>Our Services</h2>
@@ -534,7 +584,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="booking-section" id="booking">
         <div class="booking-container">
@@ -608,7 +658,7 @@
                     <img src="./waterroll.jpg" alt="Filtration Systems">
                 </div>
                 <div class="product-info">
-                    <h3>Pouch Water Roll and Plastic Scak</h3>
+                    <h3>Pouch Water Roll and Plastic Sack</h3>
                     <p>We provide high-quality pouch water rolls, plastic bags, and thread.</p>
                     <p>हम उच्च गुणवत्ता वाले पाउच पानी रोल, प्लास्टिक बैग(बोरा) और धागा प्रदान करते हैं।</p>
                 </div>
