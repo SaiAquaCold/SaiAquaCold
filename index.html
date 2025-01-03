@@ -617,6 +617,9 @@
                                 <option value="other">Other</option>
                             </select>
                         </div>
+                        <div class="form-group">
+                            <input type="date" placeholder="Date" name="Date" id="Date" required>
+                        </div>
                         <div class="form-group full-width">
                             <textarea rows="4" placeholder="Additional Requirements"></textarea>
                         </div>
@@ -684,7 +687,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact Information</h3>
-
+                <p>Name: Munna Prasad Rauniyar</p>
                 <p>Phone: +91 9936605094, +91 9935847227</p>
                 <p>Address 1: Near HomeGaurd Office, Chiuraha Rd, Bismil Nagar, Maharajganj 273303 </p>
                 <p>Address 2: Near EveryDay Super Mart, Bismil Nagar, Maharajganj, Uttar Pradesh 273303 </p>
@@ -705,12 +708,14 @@
             param2 = "Address"
             param3 = "Phone Number"
             param4 = "Event Type"
+            param5 = "Date"
             value1 = document.getElementById("name").value
             value2 = document.getElementById("address").value
             value3 = document.getElementById("number").value
             value4 = document.getElementById("event_type").value
+            value5 = document.getElementById("Date").value
             const xhr = new XMLHttpRequest();
-            const fullUrl = `${url}?${param1}=${value1}&${param2}=${value2}&${param3}=${value3}&${param4}=${value4}`;
+            const fullUrl = `${url}?${param1}=${value1}&${param2}=${value2}&${param3}=${value3}&${param4}=${value4}&${param5}=${value5}`;
 
             xhr.open('GET', fullUrl, true);
 
@@ -732,6 +737,7 @@
             document.getElementById("address").value=""
             document.getElementById("number").value=""
             document.getElementById("event_type").value=""
+            document.getElementById("Date").value=""
          
         }
                     </script>
